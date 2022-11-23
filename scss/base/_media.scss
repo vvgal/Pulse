@@ -1,3 +1,8 @@
+@media (max-width: 1140px) {
+    .promo {
+        background: url('../img/header_bg.jpg') -250px (center/cover) no-repeat;
+    }
+}
 @media (max-width: 767px) {
     .header {
         &__official {
@@ -56,6 +61,11 @@
 @media (max-width: 425px) {
     .container {
         padding: 0 10px;
+    }
+    .promo {
+        &__icon {
+            padding: 0 10px;
+        }
     }
     .header {
         &__logo {
