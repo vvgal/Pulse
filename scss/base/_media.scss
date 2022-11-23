@@ -25,6 +25,12 @@
             }
         }
     }
+    .consultation {
+        text-align: center;
+        &__form {
+            margin: 36px auto 0 auto;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -54,6 +60,15 @@
     .advantages {
         &__title {
             font-size: 24px;
+        }
+    }
+    .consultation {
+        &__title {
+            font-size: 28px;
+        }
+        &__description {
+            margin-top: 55px;
+            font-size: 16px;
         }
     }
 }
