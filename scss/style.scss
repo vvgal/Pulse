@@ -9,6 +9,7 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 25px;
+    position: relative;
 }
 .title {
     text-align: center;
@@ -23,5 +24,6 @@
 @import 'blocks/advantages';
 @import 'blocks/consultation';
 @import 'blocks/forms';
+@import 'blocks/carousel';
 
 @import 'base/media';
