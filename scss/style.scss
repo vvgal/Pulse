@@ -12,6 +12,7 @@
     position: relative;
 }
 .title {
+    text-transform: uppercase;
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -25,5 +26,7 @@
 @import 'blocks/consultation';
 @import 'blocks/forms';
 @import 'blocks/carousel';
+@import 'blocks/catalog';
+@import 'blocks/reviews';
 
 @import 'base/media';

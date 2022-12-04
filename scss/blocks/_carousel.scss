@@ -1,5 +1,5 @@
 .carousel {
-    padding: 81px 0px;
+    padding: 81px 0;
     .container {
         max-width: 750px;
     }
@@ -29,4 +29,8 @@
         // padding-right: 0;
         // padding-left: 70px;
     }
+}
+.tns-horizontal.tns-subpixel>.tns-item {
+    display: flex;
+    align-items: center;
 }

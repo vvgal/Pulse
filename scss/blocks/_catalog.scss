@@ -1,0 +1,165 @@
+.catalog {
+    padding-bottom: 83px;
+    &__tabs {
+        margin-top: 69px;
+        display: flex;
+        justify-content: center;
+    }
+    &__tab {
+        margin: 0 5px;
+        width: 220px;
+        height: 50px;
+        border: 2px solid #d0d0d0;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #6b6b6b;
+        text-align: center;
+        line-height: 48px;
+        transform: skewX(-30deg);
+        transition: 0.5s all;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 2px 2px 15px $main_color;
+            border: none;
+        }
+        div {
+            transform: skewX(30deg);
+        }
+        &_active {
+            color: #ffffff;
+            background-color: $main_color;
+            border: none;
+        }
+    }
+    &__content {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 59px;
+        &_active {
+            display: flex;
+        }
+        &_narrow {
+            justify-content: flex-start;
+            .catalog-item:last-child {
+                margin-left: 15px;
+            }
+        }
+    }
+    &-item {
+        margin-bottom: 20px;
+        padding: 20px 20px 27px 20px;
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        overflow: hidden;
+        &__wrapper {
+            display: flex;
+            width: 200%;
+        }
+        &__content {
+            width: 50%;
+            transform: translateX(-110%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%);
+
+            }
+        }
+        &__list {
+            width: 50%;
+            transform: translateX(10%);
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(-100%);
+            }
+            li {
+                font-size: 14px;
+                line-height: 1.2;
+                font-weight: 300;
+                color: #555555;
+                margin-bottom: 20px;
+                margin-left: 18px;
+                position: relative;
+            }
+            li:before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 6px;
+                left: -19px;
+                width: 5px;
+                height: 5px;
+                background-color: $main_color;
+            }
+        }
+        &__img {
+            max-width: 100%;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        &__title {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #0d0d0d;
+            text-align: center;
+        }
+        &__description {
+            margin-top: 16px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: #0d0d0d;
+        }
+        &__link {
+            display: block;
+            margin-top: 17px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            color: $main_color;
+            &_back {
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: underline;
+                color: $main_color;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        hr {
+            margin-top: 19px;
+            height: 1px;
+            background-color: #e8e8e8;
+        }
+        &__footer {
+            margin-top: 21px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__old-price {
+            font-size: 14px;
+            font-weight: 300;
+            color: #555555;
+            text-decoration: line-through;
+        }
+        &__new-price {
+            margin-top: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            color: #050505;
+        }
+        &__button {
+            width: 131px;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+}
