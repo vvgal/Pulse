@@ -140,6 +140,15 @@
             margin-top: 20px;
         }
     }
+    .modal {
+        width: 320px;
+        &__form {
+            width: 240px;
+        }
+        .button_submit {
+            width: 240px;
+        }
+    }
 }
 
 @media (max-width: 425px) {
@@ -193,6 +202,20 @@
             top: 0;
             left: 0;
             transform: translateX(0);
+        }
+    }
+    .modal {
+        padding: 38px 25px 40px 25px;
+        width: 300px;
+        &__form {
+            width: 250px;
+        }
+        &__exit {
+            top: 10px;
+            right: 10px;
+        }
+        .button_submit {
+            width: 250px;
         }
     }
 }
