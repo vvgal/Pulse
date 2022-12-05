@@ -70,4 +70,36 @@ $(document).ready(function(){
         $('.overlay, #order').fadeIn('slow');
       });
     });
+
+    // Validation
+    function validateForms(form) {
+      $(form).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Пожалуйста, введите имя",
+            minlength: jQuery.validator.format("Минимум {0} символа!")
+          },
+          phone: "Пожалуйста, введите номер телефона",
+          email: {
+            required: "Пожалуйста, введите e-mail",
+            email: "Введите корректный e-mail"
+          }
+        }
+      });
+    };
+
+    validateForms('.consultation__form');
+    validateForms('#consultation .form');
+    validateForms('#order .form');
 });
