@@ -45,6 +45,7 @@
             margin: 36px auto 0 auto;
         }
     }
+
     .footer {
         &__info {
             width: 280px;
@@ -103,6 +104,11 @@
         }
     }
     .catalog {
+        &__content_narrow {
+            .catalog-item {
+                margin: 0 0 20px 0;
+            }
+        }
         &__title {
             font-size: 24px;
         }
