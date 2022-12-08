@@ -102,4 +102,40 @@ $(document).ready(function(){
     validateForms('.consultation__form');
     validateForms('#consultation .form');
     validateForms('#order .form');
+
+    // Masked input
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    // Mailer
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        $('#consultation, #order').fadeOut();
+        $('.overlay, #thanks').fadeIn();
+        $('form').trigger('reset');
+      });
+      return false;
+    });
+
+    // Scroll page up
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 655) {
+        $('.pageup').fadeIn();
+      } else {
+        $('.pageup').fadeOut();
+      }
+    });
+
+    $("a[href^='#']").click(function() {
+      let _href = $(this).attr("href");
+      $("html, body").animate({
+        scrollTop: $(_href).offset().top+"px"
+      });
+      return false;
+    });
 });
